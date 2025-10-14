@@ -45,10 +45,10 @@
         "streetAddress": "Portland Street",
         "addressLocality": "Manchester",
         "addressRegion": "Greater Manchester",
-        "postalCode": "M1 3LA",
+        "postalCode": "M1 6DP",
         "addressCountry": "UK"
       },
-      "telephone": "+44 161 123 4567",
+      "telephone": "+44 0161 246 3400",
       "email": "reservations.manchester@hotelssunday.com",
       "logo": "https://manchesterportland.booksundays.com/images/output-onlinepngtools.png",
       "url": "https://manchesterportland.booksundays.com/",
@@ -61,7 +61,7 @@
         {
           "@type": "LocationFeatureSpecification",
           "name": "Restaurant",
-          "value": "Jamboree Restaurant and Bar"
+          "value": "Restaurant and Bar"
         },
         {
           "@type": "LocationFeatureSpecification",
@@ -84,7 +84,7 @@
   </div>
 
   <!-- Header -->
-  <header class="site-header">
+   <header class="site-header">
     <div class="header-container">
       <div class="logo">
         <a href="index.html"><img src="images/output-onlinepngtools.png" alt="Manchester Portland by Sunday Logo" loading="lazy"></a>
@@ -96,19 +96,21 @@
               <a href="#about" aria-haspopup="true" aria-expanded="false">About</a>
               <ul class="dropdown-menu" aria-label="About submenu">
                 <li><a href="about.html">Our Story</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                
                 <!-- <li><a href="pet-policy.html">Pet Policy</a></li> -->
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="explore.html">Explore Manchester</a></li>
                 <!-- <li><a href="history.html">History</a></li> -->
               </ul>
             </li>
-            <li class="has-dropdown">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <!-- <li class="has-dropdown">
               <a href="#stay" aria-haspopup="true" aria-expanded="false">Stay</a>
               <ul class="dropdown-menu" aria-label="Stay submenu">
-                <li><a href="rooms.html">Rooms & Suites</a></li>
+                
               </ul>
-            </li>
+            </li> -->
             <li><a href="dining.html">Dining</a></li>
             <li><a href="meetings.html">Meetings & Events</a></li>
           </ul>
@@ -148,27 +150,45 @@
   <section class="rooms-section" id="rooms">
     <div class="section-label">Room Types</div>
     <h2>Choose Your Stay</h2>
-    <div class="rooms-filter">
-      <button class="filter-btn active" data-filter="all" aria-selected="true">All</button>
-      <button class="filter-btn" data-filter="double" aria-selected="false">Double</button>
-      <button class="filter-btn" data-filter="twin" aria-selected="false">Twin</button>
-    </div>
-    <div class="rooms-container">
-      <div class="room-card" data-type="double" data-animate>
-        <img src="images/aja_p_4128-57__11by5.jpeg" alt="Double Room" loading="lazy">
-        <h3>Double Room</h3>
-        <p>Approx 200 sqft | 1 Double Bed</p>
-        <p>High-speed WiFi, Private Bathroom with Free Toiletries, Flat-Screen LCD TV, Tea/Coffee Maker, Air Conditioning, Hairdryer, Work Desk</p>
-        <button class="details-btn" data-room="double-room" aria-label="View details for Double Room">Details</button>
-      </div>
-      <div class="room-card" data-type="twin" data-animate>
-        <img src="images/aja_p_4128-54__original.jpeg" alt="Twin Room" loading="lazy">
-        <h3>Twin Room</h3>
-        <p>Approx 200 sqft | 2 Single Beds</p>
-        <p>High-speed WiFi, Private Bathroom with Free Toiletries, Flat-Screen LCD TV, Tea/Coffee Maker, Air Conditioning, Hairdryer, Work Desk</p>
-        <button class="details-btn" data-room="twin-room" aria-label="View details for Twin Room">Details</button>
-      </div>
-    </div>
+   <div class="rooms-filter">
+  <button class="filter-btn active" data-filter="all" aria-selected="true">All</button>
+  <button class="filter-btn" data-filter="single" aria-selected="false">Single</button>
+  <button class="filter-btn" data-filter="compact-double" aria-selected="false">Compact Double</button>
+  <button class="filter-btn" data-filter="double" aria-selected="false">Double</button>
+  <button class="filter-btn" data-filter="twin" aria-selected="false">Twin</button>
+</div>
+
+<div class="rooms-container">
+  <div class="room-card" data-type="single" data-animate>
+    <img src="images/single-bed.jpg" alt="Single Room" loading="lazy">
+    <h3>Single Room</h3>
+    <p>Approx 150 sqft | 1 Single Bed</p>
+    <p>High-speed WiFi, Private Bathroom with Free Toiletries, Flat-Screen LCD TV, Tea/Coffee Maker, Air Conditioning, Hairdryer, Work Desk</p>
+    <button class="details-btn" data-room="single-room" aria-label="View details for Single Room">Details</button>
+  </div>
+  <div class="room-card" data-type="compact-double" data-animate>
+    <img src="images/compact-double.jpg" alt="Compact Double Room" loading="lazy">
+    <h3>Compact Double Room</h3>
+    <p>Approx 170 sqft | 1 Double Bed</p>
+    <p>Modern and efficient design, High-speed WiFi, Ensuite Bathroom, Smart TV, Tea/Coffee Maker, Air Conditioning, Hairdryer</p>
+    <button class="details-btn" data-room="compact-double-room" aria-label="View details for Compact Double Room">Details</button>
+  </div>
+  <div class="room-card" data-type="double" data-animate>
+    <img src="images/aja_p_4128-57__11by5.jpeg" alt="Double Room" loading="lazy">
+    <h3>Double Room</h3>
+    <p>Approx 200 sqft | 1 Double Bed</p>
+    <p>High-speed WiFi, Private Bathroom with Free Toiletries, Flat-Screen LCD TV, Tea/Coffee Maker, Air Conditioning, Hairdryer, Work Desk</p>
+    <button class="details-btn" data-room="double-room" aria-label="View details for Double Room">Details</button>
+  </div>
+  <div class="room-card" data-type="twin" data-animate>
+    <img src="images/aja_p_4128-54__original.jpeg" alt="Twin Room" loading="lazy">
+    <h3>Twin Room</h3>
+    <p>Approx 200 sqft | 2 Single Beds</p>
+    <p>High-speed WiFi, Private Bathroom with Free Toiletries, Flat-Screen LCD TV, Tea/Coffee Maker, Air Conditioning, Hairdryer, Work Desk</p>
+    <button class="details-btn" data-room="twin-room" aria-label="View details for Twin Room">Details</button>
+  </div>
+</div>
+
     <!-- Room Details Modal -->
     <div class="modal" id="roomModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
       <div class="modal-content">
@@ -185,7 +205,7 @@
     <div class="cta-container">
       <h2>Book Your Stay</h2>
       <p>Experience vibrant comfort in the heart of Manchester.</p>
-      <p><a href="mailto:reservations.manchester@hotelssunday.com">reservations.manchester@hotelssunday.com</a> | <a href="tel:+441611234567">+44 161 123 4567</a></p>
+      <p><a href="mailto:reservations.manchester@hotelssunday.com">reservations.manchester@hotelssunday.com</a> | <a href="tel:+4401612463400">+44 0161 246 3400</a></p>
       <a href="https://booking.emea.hkclients.com/index.html#/booking/search?pc=ENMAN001&property_id=84203580-4f1d-4a6e-924a-e66c0bae2da3&url=https://www.oyorooms.com/gb/291853/" class="btn-primary" target="_blank" rel="noopener" onclick="gtag('event', 'click', { 'event_category': 'Button', 'event_label': 'Book Now', 'value': 1 });">Book Now</a>
     </div>
   </section>
@@ -197,8 +217,8 @@
         <a href="contact.html" class="footer-button">Contact Us</a>
         <address>
           Manchester Portland by Sunday<br>
-          Portland Street, Manchester, Greater Manchester, M1 3LA<br>
-          <a href="tel:+441611234567">+44 161 123 4567</a><br>
+          building number – 3 – 5 Portland Street, Manchester, Greater Manchester, M1 6DP<br>
+          <a href="tel:+4401612463400">+44 0161 246 3400</a><br>
           <a href="mailto:reservations.manchester@hotelssunday.com">reservations.manchester@hotelssunday.com</a><br>
           <a href="https://www.instagram.com/manchesterportland/">Instagram: manchesterportland</a><br>
           <a href="https://www.facebook.com/ManchesterPortland">Facebook: ManchesterPortland</a>

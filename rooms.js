@@ -134,15 +134,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.modal-close');
 
     const roomDetails = {
-        'double-room': {
-            title: 'Double Room',
-            details: 'Approx 200 sqft | 1 Double Bed<br>Enjoy a cozy stay with quirky weather-themed decor, high-speed WiFi, private bathroom with free toiletries, flat-screen LCD TV, tea/coffee maker, air conditioning, hairdryer, and work desk. Non-smoking. Pet-friendly options available.'
-        },
-        'twin-room': {
-            title: 'Twin Room',
-            details: 'Approx 200 sqft | 2 Single Beds<br>Perfect for sharing, featuring quirky weather-themed decor, high-speed WiFi, private bathroom with free toiletries, flat-screen LCD TV, tea/coffee maker, air conditioning, hairdryer, and work desk. Non-smoking. Pet-friendly options available.'
-        }
-    };
+    'double-room': {
+        title: 'Double Room',
+        details: 'Approx 200 sqft | 1 Double Bed<br>Enjoy a cozy stay with quirky weather-themed decor, high-speed WiFi, private bathroom with free toiletries, flat-screen LCD TV, tea/coffee maker, air conditioning, hairdryer, and work desk. Non-smoking. Pet-friendly options available.'
+    },
+    'twin-room': {
+        title: 'Twin Room',
+        details: 'Approx 200 sqft | 2 Single Beds<br>Perfect for sharing, featuring quirky weather-themed decor, high-speed WiFi, private bathroom with free toiletries, flat-screen LCD TV, tea/coffee maker, air conditioning, hairdryer, and work desk. Non-smoking. Pet-friendly options available.'
+    },
+    'single-room': {
+        title: 'Single Room',
+        details: 'Approx 150 sqft | 1 Single Bed<br>Ideal for solo travellers, featuring quirky weather-themed decor, high-speed WiFi, private bathroom with complimentary toiletries, flat-screen LCD TV, tea/coffee maker, air conditioning, hairdryer, and work desk. Non-smoking.'
+    },
+    'compact-double-room': {
+        title: 'Compact Double Room',
+        details: 'Approx 170 sqft | 1 Double Bed<br>Smart, space-efficient design with quirky weather-themed decor, high-speed WiFi, ensuite bathroom with shower, smart TV, tea/coffee maker, air conditioning, and hairdryer. Non-smoking.'
+    }
+};
+
 
     document.querySelectorAll('.details-btn').forEach(button => {
         button.addEventListener('click', () => {
