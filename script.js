@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Constants
-  const SLIDE_INTERVAL = 6000;
+  const SLIDE_INTERVAL = 6000; // 6 seconds for automatic slide change
   const DEBOUNCE_DELAY = 200;
+  const TRANSITION_DURATION = 500; // 0.5 seconds for CSS transition, matching CSS
 
   // Utility: Debounce
   const debounce = (func, delay) => {
@@ -86,18 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
     preloadImages(slides);
 
     const showSlide = (index) => {
-      slides.forEach((slide, i) => {
-        const isActive = i === index;
-        slide.classList.toggle('active', isActive);
-        const img = slide.querySelector('img');
-        if (img && slide.hasAttribute('data-zoom')) {
-          img.style.transform = isActive ? 'scale(1)' : 'scale(1.05)';
-        }
+      // Prevent transitions during setup
+      slides.forEach(slide => {
+        slide.style.transition = 'none';
+        slide.classList.remove('active');
       });
+
+      // Set up the new active slide
+      const newSlide = slides[index];
+      newSlide.classList.add('active');
+
+      // Re-enable transitions after a brief delay to avoid initial flicker
+      setTimeout(() => {
+        slides.forEach(slide => {
+          slide.style.transition = `opacity ${TRANSITION_DURATION}ms ease-in-out`;
+        });
+      }, 50);
+
       if (dotsContainer) {
         const dots = dotsContainer.querySelectorAll('.dot');
         dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
       }
+
       currentSlide = index;
     };
 
